@@ -84,4 +84,7 @@ To achieve scale invariance, we must shift from calculating absolute distance to
 
 I stand corrected, upon further testing it would turn out gesture pinch is also being detected as intended. Certain paramaters may need to be redfined to make the detection system smoother, but for initial testing of gesture detection this is satisfactory. Will be implementing further setup to enable gestures to run commands when building the Event Router and System Automation layers. For now moving on to phase 3.
 
+Note to Self:
+The project is being developped on a Snapdragon-based machine (ARM architecture). Sometimes, older Python UI automation libraries like pyautogui rely heavily on traditional x86 Windows API calls. While Windows 11 has a great emulation layer, it can occasionally drop automated keystrokes. If  volume shortcuts refuse to trigger later on, I must use ctypes or pywin32 for direct, ARM-compatible OS hooks.
+
 -----------------------------------------------------------------------------------------------
