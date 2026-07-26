@@ -91,7 +91,7 @@ The project is being developped on a Snapdragon-based machine (ARM architecture)
 
 It would seem I am limited by the technology I have access to. While my initial plan was running a local model that ensures privacy and zero network latency for my STT model, Standard PyTorch and CTranslate2 libraries required for the project currently lack deep, native acceleration for Qualcomm Hexagon NPUs out-of-the-box in standard Python environments. The code would fall back to CPU execution (potentially running via x86 emulation like Windows Prism). This will spike my  CPU usage, drastically increase transcription latency, and risk bottlenecking your event queues.
 
-Hence, temporarily to keep the project going I will be Offloading the STT to the cloud (using an OpenAI cloud API) bypassing the ARM compute limitation entirely. It keeps the local CPU free for MediaPipe and the core daemons. 
+Hence, temporarily to keep the project going I will be Offloading the STT to the cloud (using Google Web Speech API) bypassing the ARM compute limitation entirely. It keeps the local CPU free for MediaPipe and the core daemons and also is free to use with simply requiring an internet connection to function.
 
 I have documented possible future solutions but they arent relevant to be mentioned here for the time being.
 -----------------------------------------------------------------------------------------------
