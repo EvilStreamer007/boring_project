@@ -81,3 +81,7 @@ To achieve scale invariance, we must shift from calculating absolute distance to
  Upon some testing it would seem again the pinch gesture isn't working, I now suspect it might be an issue with my camera quality, backgroud, or lighting received by it. For the moment I will be moving forward onto the next phase and visiting back gesture controls shortly, as the main purpose is voice control, not action controls.
 
 -----------------------------------------------------------------------------------------------
+
+I stand corrected, upon further testing it would turn out gesture pinch is also being detected as intended. Certain paramaters may need to be redfined to make the detection system smoother, but for initial testing of gesture detection this is satisfactory. Will be implementing further setup to enable gestures to run commands when building the Event Router and System Automation layers. For now moving on to phase 3.
+
+-----------------------------------------------------------------------------------------------
