@@ -62,4 +62,22 @@ To achieve scale invariance, we must shift from calculating absolute distance to
 
 -----------------------------------------------------------------------------------------------
 
+# Project State: Windows Voice & Vision Assistant
+**Last Updated:** Phase 2 - Gesture Engine (Scale Invariance Update)
 
+## Active Modules
+*   **Module 01:** `MOD-01_dual_input_v0.1.0.py`
+    *   **Status:** Scaffolding complete. Dual multiprocessing daemons running.
+*   **Module 02:** `MOD-02_gesture_engine_v0.1.2.py` (UPDATED)
+    *   **Status:** Advanced gesture logic integrated. Scale-invariant pinch detection added.
+    *   **Core Tech:** `mediapipe.tasks.python.vision`, Euclidean Geometry, Biomechanical Ratios.
+    *   **Design Pattern:** Finite State Machine / Class Wrapper.
+
+## Inter-Module Interfaces
+*   `GestureEngine` (Class):
+    *   *Input:* Raw BGR video frame (`numpy.ndarray`).
+    *   *Output:* Strings (`"GESTURE_PALM"`, `"GESTURE_PINCH"`) or `None` (filtered via 10-frame debounce).
+
+ Upon some testing it would seem again the pinch gesture isn't working, I now suspect it might be an issue with my camera quality, backgroud, or lighting received by it. For the moment I will be moving forward onto the next phase and visiting back gesture controls shortly, as the main purpose is voice control, not action controls.
+
+-----------------------------------------------------------------------------------------------
