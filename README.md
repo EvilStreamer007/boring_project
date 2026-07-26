@@ -20,3 +20,25 @@ wanted to play some music but my phone ran out of battery and the laptop was too
 *   Integrate Picovoice Porcupine into `audio_worker` (Phase 2).
 *   Integrate MediaPipe into `vision_worker` (Phase 3).
 *   Design the LLM Intent Router (Phase 4).
+  
+-----------------------------------------------------------------------------------------------
+
+# Project State: Windows Voice & Vision Assistant
+**Last Updated:** Phase 2 - Gesture Engine
+
+## Active Modules
+*   **Module 01:** `MOD-01_dual_input_v0.1.0.py`
+    *   **Status:** Scaffolding complete. Dual multiprocessing daemons running.
+*   **Module 02:** `MOD-02_gesture_engine_v0.1.0.py`
+    *   **Status:** Core logic constructed. Standalone testing active.
+    *   **Core Tech:** `mediapipe`, Euclidean geometry, Temporal Debouncing.
+    *   **Design Pattern:** Finite State Machine / Class Wrapper.
+
+## Inter-Module Interfaces
+*   `GestureEngine` (Class):
+    *   *Input:* Raw BGR video frame (`numpy.ndarray`).
+    *   *Output:* String (`"GESTURE_PALM"`) or `None` (filtered via 10-frame debounce).
+
+## Pending / Next Steps
+*   Inject `MOD-02` into the `vision_worker` of `MOD-01` (Phase 2.5).
+*   Integrate Picovoice Porcupine into `audio_worker` (Phase 3).
