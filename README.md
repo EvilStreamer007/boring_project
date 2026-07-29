@@ -117,3 +117,17 @@ I have documented possible future solutions but they arent relevant to be mentio
     
 -----------------------------------------------------------------------------------------------
 
+# Project State: Windows Voice & Vision Assistant
+**Last Updated:** Phase 3 - STT Layer (Telemetry & Normalization Update)
+
+## Active Modules
+*   **Module 01:** `MOD-01_dual_input_v0.1.0.py`
+    *   **Status:** Scaffolding complete.
+*   **Module 02:** `MOD-02_gesture_engine_v0.1.2.py`
+    *   **Status:** Advanced gesture logic integrated. 
+*   **Module 03:** `MOD-03_stt_transcriber_v0.1.3.py` (UPDATED)
+    *   **Status:** Data normalization and local WAV telemetry added to fix API parsing errors.
+    *   **Core Tech:** `sounddevice`, `numpy`, `wave`, `SpeechRecognition` (Google free tier).
+    *   **Design Pattern:** In-Memory Byte Stream / Observability Logging.
+    
+-----------------------------------------------------------------------------------------------
